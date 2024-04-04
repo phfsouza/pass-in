@@ -1,0 +1,34 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title": "Novo evento 2",
+    "details": null,
+    "maximumAttendees": 1
+}
+
+###
+
+POST http://localhost:3333/events/e4ff40c4-af77-41f8-b6ad-8743aa9323f0/attendees
+Content-Type: application/json
+
+{
+    "name": "Pedro Souza",
+    "email": "pedro4@pedro.com"
+}
+
+###
+
+GET http://localhost:3333/events/e4ff40c4-af77-41f8-b6ad-8743aa9323f0
+
+###
+
+GET http://localhost:3333/attendees/4/badge
+
+###
+
+GET http://localhost:3333/attendees/4/check-in
+
+###
+
+GET http://localhost:3333/events/e4ff40c4-af77-41f8-b6ad-8743aa9323f0/attendees?query=pedro
