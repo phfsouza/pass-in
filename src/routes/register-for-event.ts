@@ -7,7 +7,7 @@ import { BadRequest } from "./_errors/bad-request";
 export async function registerForEvent(app: FastifyInstance) {
     app
         .withTypeProvider<ZodTypeProvider>()
-        .post('/events/:eventId/attendees', {
+        .post('/events/:eventId/register', {
             schema: {
                 summary: 'Register an attendee',
                 tags: ['attendees'],
